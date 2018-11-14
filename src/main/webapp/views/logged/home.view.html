@@ -1,0 +1,70 @@
+<div class="component-holder ng-binding ng-scope" data-component="crn-navbar" id="crn-navbar-986427">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+         
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" style="float:none">
+          <li class="dropdown component-holder" data-component="">  </li>
+          <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-users fa-lg"></i> <span>Usuários</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              <li><a href="#/home/admin/user" class="component-holder" data-component="crn-anchor">{{"Home.view.Users" | translate}}</a></li>
+            </ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-heartbeat"></i> <span>Médicos</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              
+            <li class="active"><a href="#/home/admin/medico" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Médicos</a></li></ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-calendar"></i> <span>Agenda</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              
+            <li><a href="#/home/admin/agenda" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Agenda</a></li><li><a href="#/home/admin/solicitacao_mudanca" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Solicitação Mudança</a></li></ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-clock-o"></i> <span>Plantão/Escala</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              
+            <li><a href="#/home/admin/local_plantao" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Local Plantão</a></li><li><a href="#/home/admin/horario_escala" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Horário Escala</a></li></ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-hospital-o"></i> <span>Hospital</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              
+            <li><a href="#/home/admin/hospitais" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Hospital</a></li></ul> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-credit-card"></i> <span>Convênio</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu" style="">
+              
+            <li><a href="#/home/admin/convenio" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Convênio</a></li></ul> </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div ui-view="" class="container-fluid main-view" data-container="true">
+</div>
+
+<div class="modal fade" id="modalPassword">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-validation" autocomplete="off" name="form" role="form">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+          </div>
+          <div class="list-group list-group-sm">
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control no-border" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}" ng-required="true">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading">{{"Home.view.ChangePassword" | translate}}</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{'Home.view.Close' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>
